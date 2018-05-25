@@ -1,5 +1,14 @@
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
 .logo img {
   width: 330px;
+}
+
+.subscribe img {
+  width: 100px;
 }
 
 /* ---grid stuff--- */
