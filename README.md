@@ -4,6 +4,7 @@ The Onion is an online satirical news website. This project is a clone of the ho
 ## The Real Webite
 ![](onion-home-page.png)
 ## The Clone
+![](onion-clone.png)
 ## Installation
 * Clone project folder in terminal: `$ git clone` repository url
 * In terminal, run `$ npm install` within project folder home directory
