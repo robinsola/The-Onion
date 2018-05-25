@@ -89,7 +89,7 @@ a {
   width: 100px;
 }
 
-/* ---grid stuff--- */
+/* --- grid stuff --- */
 
 .wrapper {
   display: grid;
@@ -99,8 +99,8 @@ a {
   "main-content"
   "left-content"
   "right-content"
-  "videos"
   "bottom-content"
+  "videos"
   "subscribe"
   "footer"
 }
@@ -181,23 +181,40 @@ a {
   border: 1px solid black;
 }
 
+/* -- media queries -- */
+
 @media screen and (min-width:700px) {
   .wrapper {
     grid-template-areas:
-    "left-content main-content main-content right-content"
-    "left-content videos videos right-content"
-    "bottom-content bottom-content bottom-content bottom-content"
+    "main-content main-content main-content right-content"
+    "left-content bottom-content bottom-content bottom-content"
+    "videos bottom-content bottom-content bottom-content"
     "subscribe subscribe subscribe subscribe"
     "footer footer footer footer"
   }
+  .main-content h2 {
+    font-size: 30px;
+  }
+  .main-content {
+    padding: 0 20px;
+    border-right: 1px solid gray;
+  }
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1050px) {
   .wrapper {
     grid-template-areas:
     "left-content main-content main-content right-content"
     "videos bottom-content bottom-content bottom-content"
     "subscribe subscribe subscribe subscribe"
     "footer footer footer footer"
+  }
+  .main-content h2 {
+    font-size: 40px;
+  }
+  .main-content {
+    padding: 0 20px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
   }
 }
