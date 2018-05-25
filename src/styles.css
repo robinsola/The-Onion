@@ -1,18 +1,17 @@
 body {
-  font-family: sans-serif;
+  margin: 0;
+  font-family: Tahoma;
 }
 
 img {
   object-fit: cover;
   width: 100%;
-  transition: .3s;
 }
 
 img:hover {
   cursor: pointer;
   filter: brightness(65%);
   transition: .5s;
-  /* box-shadow: 0 1px 8px black; */
 }
 
 h2 {
@@ -60,11 +59,10 @@ a {
 .nav-main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .nav-main a {
-  border: 1px solid lightgray;
   color: #aaa;
 }
 
@@ -73,7 +71,7 @@ a {
 }
 
 .logo img {
-  width: 330px;
+  width: 180px;
   margin: 10px 0 30px 0;
 }
 
@@ -93,8 +91,7 @@ a {
   "right-content"
   "bottom-content"
   "videos"
-  "subscribe"
-  "footer";
+  "subscribe";
 }
 
 .left-content {
@@ -134,7 +131,7 @@ a {
   background-color: rgb(241, 241, 241);
   padding: 30px;
   border-radius: 5px;
-  border-bottom: 2px solid #aaa;
+  border-top: 2px solid #aaa;
 }
 
 .subscribe h3 {
@@ -172,6 +169,30 @@ a {
 
 .footer {
   grid-area: footer;
+  padding: 3px 30px;
+  text-align: center;
+  background-color: #3a3a3a;
+}
+
+.footer p {
+  color: #666;
+}
+
+.footer a {
+  color: #e5e5e5;
+}
+
+.footer a:hover {
+ text-decoration: underline;
+}
+
+.footer img {
+  width: 30px;
+  margin: 30px 10px;
+}
+
+#menu-icon {
+  display: none;
 }
 
 /* -- media queries -- */
@@ -182,8 +203,7 @@ a {
     "main-content main-content main-content right-content"
     "left-content bottom-content bottom-content bottom-content"
     "videos bottom-content bottom-content bottom-content"
-    "subscribe subscribe subscribe subscribe"
-    "footer footer footer footer";
+    "subscribe subscribe subscribe subscribe";
   }
   .main-content h2 {
     font-size: 30px;
@@ -196,6 +216,15 @@ a {
     padding: 0 0 0 20px;
     border-left: 1px solid lightgray;
   }
+  .nav-main {
+    align-items: center;
+  }
+  .nav-main a {
+    border: 1px solid lightgray;
+  }
+  .logo img {
+    width: 330px;
+  }
 }
 
 @media screen and (min-width:1050px) {
@@ -203,8 +232,7 @@ a {
     grid-template-areas:
     "left-content main-content main-content right-content"
     "videos bottom-content bottom-content bottom-content"
-    "subscribe subscribe subscribe subscribe"
-    "footer footer footer footer";
+    "subscribe subscribe subscribe subscribe";
   }
   .main-content h2 {
     font-size: 40px;
@@ -218,6 +246,9 @@ a {
     display: block;
     background-color: black;
     color: #aaa;
+  }
+  .nav-top li {
+    padding: 6px 0 8px 0;
   }
   .nav-top a {
     font-size: 12px;
