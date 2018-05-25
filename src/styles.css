@@ -5,6 +5,34 @@ body {
 img {
   object-fit: cover;
   width: 100%;
+  transition: .3s;
+}
+
+img:hover {
+  cursor: pointer;
+  filter: brightness(65%);
+  transition: .5s;
+  /* opacity: 0.8; */
+  /* box-shadow: 0 1px 8px black; */
+}
+
+h2 {
+  font-family: georgia;
+}
+
+p {
+  color: #666;
+  font-weight: 100;
+}
+
+p a {
+  font-size: 14px;
+  color: #aaa;
+}
+
+p a:hover {
+  color: #666;
+  text-decoration: underline;
 }
 
 ul {
@@ -24,6 +52,7 @@ li {
 a {
   text-decoration: none;
 }
+
 
 .nav-top {
   background-color: black;
@@ -80,32 +109,36 @@ a {
 
 .left-content {
   grid-area: left-content;
-  border: 1px solid black;
+  padding: 10px;
+  border-bottom: 2px solid #aaa;
 }
 
 .right-content {
   grid-area: right-content;
-  border: 1px solid black;
+  padding: 10px;
+  border-bottom: 2px solid #aaa;
 }
 
 .main-content {
   grid-area: main-content;
-  border: 1px solid black;
+  border-bottom: 2px solid #aaa;
 }
 
 .videos {
   grid-area: videos;
-  border: 1px solid black;
+  padding: 10px;
+  border-bottom: 2px solid #aaa;
 }
 
 .bottom-content {
   grid-area: bottom-content;
-  border: 1px solid black;
+  padding: 10px;
+  border-bottom: 2px solid #aaa;
 }
 
 .subscribe {
   grid-area: subscribe;
-  border: 1px solid black;
+  border-bottom: 2px solid #aaa;
 }
 
 .footer {
