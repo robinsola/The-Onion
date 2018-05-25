@@ -43,32 +43,18 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-li {
+  margin-top: 0;
+  padding: 0;
   list-style: none;
-  padding: 3px;
-  margin: 3px;
 }
 
 a {
+  padding: 5px;
   text-decoration: none;
 }
 
-
 .nav-top {
-  background-color: black;
-  color: #aaa;
-}
-
-.nav-top a {
-  font-weight: 100;
-  color: #aaa;
-  padding: 3px;
-}
-
-.nav-top a:hover {
-  background-color: white;
+  display: none;
 }
 
 .nav-main {
@@ -78,6 +64,7 @@ a {
 }
 
 .nav-main a {
+  border: 1px solid lightgray;
   color: #aaa;
 }
 
@@ -87,6 +74,7 @@ a {
 
 .logo img {
   width: 330px;
+  margin: 10px 0 30px 0;
 }
 
 .subscribe img {
@@ -106,12 +94,13 @@ a {
   "bottom-content"
   "videos"
   "subscribe"
-  "footer"
+  "footer";
 }
 
 .left-content {
   grid-area: left-content;
   padding: 10px;
+  border-bottom: 1px solid lightgray;
 }
 
 .right-content {
@@ -194,14 +183,18 @@ a {
     "left-content bottom-content bottom-content bottom-content"
     "videos bottom-content bottom-content bottom-content"
     "subscribe subscribe subscribe subscribe"
-    "footer footer footer footer"
+    "footer footer footer footer";
   }
   .main-content h2 {
     font-size: 30px;
   }
   .main-content {
     padding: 0 20px;
-    border-right: 1px solid gray;
+    border-right: 1px solid lightgray;
+  }
+  .bottom-content {
+    padding: 0 0 0 20px;
+    border-left: 1px solid lightgray;
   }
 }
 
@@ -211,14 +204,28 @@ a {
     "left-content main-content main-content right-content"
     "videos bottom-content bottom-content bottom-content"
     "subscribe subscribe subscribe subscribe"
-    "footer footer footer footer"
+    "footer footer footer footer";
   }
   .main-content h2 {
     font-size: 40px;
   }
   .main-content {
     padding: 0 20px;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+  }
+  .nav-top {
+    display: block;
+    background-color: black;
+    color: #aaa;
+  }
+  .nav-top a {
+    font-size: 12px;
+    font-weight: 100;
+    color: #aaa;
+    padding: 10px 5px;
+  }
+  .nav-top a:hover {
+    background-color: white;
   }
 }
