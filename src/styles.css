@@ -180,3 +180,24 @@ a {
   grid-area: footer;
   border: 1px solid black;
 }
+
+@media screen and (min-width:700px) {
+  .wrapper {
+    grid-template-areas:
+    "left-content main-content main-content right-content"
+    "left-content videos videos right-content"
+    "bottom-content bottom-content bottom-content bottom-content"
+    "subscribe subscribe subscribe subscribe"
+    "footer footer footer footer"
+  }
+}
+
+@media screen and (min-width:1020px) {
+  .wrapper {
+    grid-template-areas:
+    "left-content main-content main-content right-content"
+    "videos bottom-content bottom-content bottom-content"
+    "subscribe subscribe subscribe subscribe"
+    "footer footer footer footer"
+  }
+}
