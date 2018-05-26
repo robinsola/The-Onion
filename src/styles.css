@@ -38,11 +38,8 @@ p a:hover {
 }
 
 ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
   margin-top: 0;
+  margin-bottom: 0;
   padding: 0;
   list-style: none;
 }
@@ -52,25 +49,38 @@ a {
   text-decoration: none;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
 .nav-top {
   display: none;
 }
 
 .nav-main {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: none;
+  position: absolute;
+  background-color: #3a3a3a;
+  box-shadow: 4px 8px 16px 0px rgba(0,0,0,0.4);
 }
 
 .nav-main a {
+  padding: 10px;
+  display: block;
   color: #aaa;
 }
 
 .nav-main a:hover {
-  color: #e5e5e5;
+  color: white;
+  background-color: green;
 }
 
-.logo img {
+.dropdown:hover .nav-main {
+  display: block;
+}
+
+.logo-nav-flex img {
   width: 180px;
   margin: 10px;
 }
@@ -196,9 +206,14 @@ a {
   display: none;
 }
 
-#menu-icon {
-  display: none;
+#dropbtn {
+  width: 30px;
+  padding: 0 0 0 10px;
 }
+
+/* #dropdown:hover .nav-main {
+  display: block;
+} */
 
 /* -- media queries -- */
 
@@ -209,6 +224,12 @@ a {
     "left-content bottom-content bottom-content bottom-content"
     "videos bottom-content bottom-content bottom-content"
     "subscribe subscribe subscribe subscribe";
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .main-content h2 {
     font-size: 30px;
@@ -221,17 +242,34 @@ a {
     padding: 0 0 0 20px;
     border-left: 1px solid lightgray;
   }
-  .nav-main {
+  .logo-nav-flex {
+    display: flex;
+    flex-direction: column-reverse;
     align-items: center;
+  }
+  .nav-main {
+    position: relative;
+    display: flex;
     margin-bottom: 30px;
+    background-color: white;
+    box-shadow: none;
   }
   .nav-main a {
+    color: #aaa;
     padding: 10px;
     border: 1px solid lightgray;
   }
-  .logo img {
+  .nav-main a:hover {
+    background-color: white;
+    color: #e5e5e5;
+  }
+  .logo-nav-flex img {
     width: 330px;
     margin-bottom: 40px;
+    margin-top: 30px;
+  }
+  #dropbtn {
+    display: none;
   }
 }
 
