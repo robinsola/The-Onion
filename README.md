@@ -1,9 +1,9 @@
 # The Onion
 ##### Clone of The Onion Home page
 The Onion is an online satirical news website. This project is a clone of the home page using css grids and flexbox to create the content layout. This website also includes media queries to view on a variety of devices with different screen sizes.
-## The Real Webite
+## The Real Website
 ![](onion-home-page.png)
-## The Clone
+## The Cloned Website
 ![](onion-clone.png)
 ## Installation
 * Clone project folder in terminal: `$ git clone` repository url
