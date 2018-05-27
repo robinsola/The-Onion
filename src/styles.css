@@ -163,6 +163,13 @@ a {
   border: none;
   border-bottom: 1px solid gray;
 }
+.subscribe input[type=text]:focus {
+  outline-style: none;
+  border-bottom: 1px solid lightblue;
+}
+.subscribe input[type=text]:hover {
+  opacity: .7;
+}
 
 .subscribe button {
   border-radius: 35px;
