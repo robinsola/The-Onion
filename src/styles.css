@@ -94,6 +94,7 @@ a {
 .wrapper {
   display: grid;
   grid-gap: 20px;
+  grid-template-columns: repeat (1fr);
   grid-template-rows: repeat (1fr);
   grid-template-areas:
   "main-content"
@@ -230,6 +231,7 @@ a {
     "main-content main-content main-content right-content"
     "left-content bottom-content bottom-content bottom-content"
     "videos bottom-content bottom-content bottom-content"
+    "extras extras extras extras"
     "subscribe subscribe subscribe subscribe";
   }
   ul {
@@ -275,6 +277,49 @@ a {
     margin-bottom: 40px;
     margin-top: 30px;
   }
+  .extras {
+    margin: 10px;
+    border-top: 1px solid lightgray;
+    grid-area: extras;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "header header header"
+    "article1 article2 article3"
+    "more-stories more-stories more-stories";
+  }
+  .header {
+    grid-area: header;
+  }
+  .article1 {
+    grid-area: article1;
+  }
+  .article2 {
+    grid-area: article2;
+  }
+  .article3 {
+    grid-area: article3;
+  }
+  .extras h4:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .more-stories {
+    grid-area: more-stories;
+    text-align: center;
+  }
+  .more-stories button {
+    border-radius: 35px;
+    color: #666;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  .more-stories button:hover {
+    transition: .8s;
+    color: black;
+    border: 1px solid black;
+  }
   #dropbtn {
     display: none;
   }
@@ -285,6 +330,7 @@ a {
     grid-template-areas:
     "left-content main-content main-content right-content"
     "videos bottom-content bottom-content bottom-content"
+    "extras extras extras extras"
     "subscribe subscribe subscribe subscribe";
   }
   .main-content h2 {
