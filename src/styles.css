@@ -6,12 +6,13 @@ body {
 img {
   object-fit: cover;
   width: 100%;
+  transition-property: filter;
+  transition-duration: 0.5s;
 }
 
 img:hover {
-  cursor: pointer;
   filter: brightness(65%);
-  transition: .5s;
+  cursor: pointer;
 }
 
 h2 {
@@ -179,11 +180,12 @@ a {
   padding: 10px 20px;
   cursor: pointer;
   margin-top: 15px;
+  transition-property: background-color;
+  transition-duration: .8s;
 }
 
 .subscribe button:hover {
   background-color: black;
-  transition: .8s;
 }
 
 .footer {
@@ -218,10 +220,6 @@ a {
   width: 30px;
   padding: 0 0 0 10px;
 }
-
-/* #dropdown:hover .nav-main {
-  display: block;
-} */
 
 /* -- media queries -- */
 
@@ -314,9 +312,10 @@ a {
     padding: 10px 20px;
     cursor: pointer;
     margin-bottom: 15px;
+    transition-property: border, color;
+    transition-duration: .8s;
   }
   .more-stories button:hover {
-    transition: .8s;
     color: black;
     border: 1px solid black;
   }
